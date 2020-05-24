@@ -91,16 +91,22 @@ using namespace std;
 int main()
 {
     speed
-    int T;
-    cin>>T;
-    while(T--)
+    ll a,b,c;
+    cin>>a>>b>>c;
+    ll n=b;
+    ll ans=(a-b)+1,sa=0;
+    for(int i=1; i<b; i++)
+        sa+=pow(2,i);
+    cout << sa+ans << " ";
+    ll sm=0;
+    for(int i=1; i<c; i++)
     {
-     int a,b;
-     cin>>a>>b;
-     int aa=min(a,b),bb=max(a,b);
-     if(aa*2>=bb) cout << 4*aa*aa << N;
-     else cout << bb*bb << N;
+        sm+=pow(2,i);
+        //cout << sm << N;
     }
+    for(int i=1; i<=a-c; i++)
+    sm+=pow(2,c-1);
+    cout << sm+1 << N;
     off;
 }
 //system("COLOR F5");
